@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+   <title>云柯</title>
+   <link href="http://singco.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="http://singco.github.io" rel="alternate" type="text/html" />
+   <updated>2014-08-12T22:36:50+08:00</updated>
+   <id>http://singco.github.io</id>
+   <author>
+     <name></name>
+     <email></email>
+   </author>
+
+   
+   <entry>
+     <title>又一次变更</title>
+     <link href="http://singco.github.io/2013/10/29/blog-change.html"/>
+     <updated>2013-10-29T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2013/10/29/blog-change</id>
+     <content type="html">&lt;p&gt;这个 violet 主题已经用了 2 年。今天一气之下将其改头换面，这个皮肤你喜欢么？恩，随便下载使用。&lt;/p&gt;
+
+&lt;h3&gt;为什么我要换个地方写博客呢？&lt;/h3&gt;
+
+&lt;p&gt;原因很多，有一个原因是因为这里的文章，被 fork 之后，就成为别人的文章。很多没删的，就这样复制过去自己的博客了。不是很喜欢。&lt;/p&gt;
+
+&lt;p&gt;另外，我喜欢不同的尝试，恩，爱折腾呗。&lt;/p&gt;
+
+&lt;h3&gt;PIZn 换到「掌心」&lt;/h3&gt;
+
+&lt;p&gt;有一句老话，前端的博客，更换主题比更换文章来的多。好像是的，我就是这样的一个博客，平时也就练练写代码，搞设计的那种感觉。&lt;/p&gt;
+
+&lt;p&gt;后来，就不是这样了，学习到的内容需要有个地方可以沉淀，于是换了个域名，改变了写作方式。&lt;/p&gt;
+
+&lt;p&gt;欢迎访问&lt;a href=&quot;http://www.zhanxin.info&quot;&gt;「掌心」&lt;/a&gt;，这里是我的新窝。&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>使用 PNG 图片制作动态 Loading</title>
+     <link href="http://singco.github.io/2012/10/26/PNG-Loading.html"/>
+     <updated>2012-10-26T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/10/26/PNG-Loading</id>
+     <content type="html">&lt;p&gt;曾经遇到过在一个 GIF 图片里面制作一个半透明的 Loading，无论怎么折腾，总有锯齿，非常不好处理。最后无奈地使用了非半透明的“菊花”，视觉有所降级。&lt;/p&gt;
+
+&lt;p&gt;其实如果不兼容 IE 的话，还是可以使用 CSS3 + PNG 图片完成这个动态的 GIF Loading 的。具体效果见 &lt;a href=&quot;http://pizn.github.io/demo/loading.html&quot; target=&quot;_blank&quot; title=&quot;demo&quot;&gt;DEMO&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;实现的方法和代码如下：&lt;/p&gt;
+
+&lt;pre name=&quot;colorcode&quot; class=&quot;css&quot;&gt;
+#loading {
+     width: 36px;
+     height: 36px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin: -18px 0 0 -18px;
+     text-indent: -9999em;
+     overflow: hidden;
+     /** loading 图片地址 **/
+     background: url(loading.png) no-repeat 0 0;
+     /** webkit **/
+     -webkit-animation-name: loadRotate;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: linear;
+     /** firefox **/ 
+     -moz-animation-name: loadRotate;
+     -moz-animation-duration: 1s;
+     -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+     /** w3c **/
+     animation-name: loadRotate;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+ }
+ /** webkit **/
+ @-webkit-keyframes loadRotate {
+     from {
+         -webkit-transform:rotate(0deg);
+     }
+     25% {
+
+     }
+     to {
+         -webkit-transform:rotate(360deg);
+     }
+ }
+ /** firefox **/
+ @-moz-keyframes loadRotate {
+     from {
+         -moz-transform:rotate(0deg);
+     }
+     to {
+         -moz-transform:rotate(360deg);
+     }
+
+ }
+ /** w3c **/
+ @keyframes loadRotate {
+     form {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(360deg);
+     }
+ }
+&lt;/pre&gt;
+
+
+&lt;p&gt;HTML 代码如下：&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+&amp;lt;p id=&quot;loading&quot;&amp;gt;Loading&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;恩，这样就 OK 了。&lt;/p&gt;
+
+&lt;p&gt;后话：Loading 的“菊花”样式，有一个 JS 可以实现，就是 &lt;a href=&quot;http://fgnass.github.com/spin.js/&quot; title=&quot;spin.js&quot; target=&quot;_blank&quot;&gt;spin.js&lt;/a&gt;，也能兼容 IE 。但其兼容 IE 的方式是使用滤镜，对性能有所影响。&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>几个 IE 样式解决方案</title>
+     <link href="http://singco.github.io/2012/06/12/some-solution-for-ie-hack.html"/>
+     <updated>2012-06-12T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/06/12/some-solution-for-ie-hack</id>
+     <content type="html">&lt;p&gt;这篇文章将会记录一些 IE 兼容性的解决方案。忙碌的时候，做个笔记。稍空的时候，记录下来。随着学习经验的积累，这就是财富。&lt;/p&gt;
+
+&lt;h3&gt;一，IE 背景穿透解决方案（空路径)&lt;/h3&gt;
+
+&lt;p&gt;有时候，为了给页面的某一个元素设置一个空的背景，那么不去设置&lt;code class=&quot;v-code&quot;&gt;background&lt;/code&gt;属性，恰巧这个元素有交互效果，要么是&lt;code class=&quot;v-code&quot;&gt;mouseover&lt;/code&gt;， 要么是&lt;code class=&quot;v-code&quot;&gt;mouseout&lt;/code&gt;。而在 IE 下，会导致该元素没有出发交互动作。或者说是穿透到了下一个元素中去。&lt;/p&gt;
+
+&lt;p&gt;这样的案例，经常发生在一些有小三角型的&lt;strong&gt;tips&lt;/strong&gt;里面。于是，我通常的解决方法如下：&lt;/p&gt;
+
+&lt;pre class=&quot;css&quot; name=&quot;colorcode&quot;&gt;
+.sl-through {
+    *background: url(about:blank);          /* for IE 6-7 */
+    background: url(about:blank)\0;         /* for IE 8 */
+}
+:root .sl-through background:rgba(0,0,0,0); /* for IE 9 */
+&lt;/pre&gt;
+
+
+&lt;h3&gt;二，Iframe 背景半透明解决方法&lt;/h3&gt;
+
+&lt;p&gt;先说一下透明的通用解决方法，例如使用&lt;code class=&quot;v-code&quot;&gt;Opacity&lt;/code&gt;来为一个&lt;code class=&quot;v-code&quot;&gt;div&lt;/code&gt;层做半透明，其实不是很建议，因为这个元素的子元素会继承半透明的属性。解决了半透明问题，结果又得处理文字上的不透明问题。&lt;/p&gt;
+
+&lt;p&gt;通常的解决方法是通过&lt;code class=&quot;v-code&quot;&gt;ruba&lt;/code&gt;(高级浏览器)和&lt;code class=&quot;v-code&quot;&gt;渐变滤镜&lt;/code&gt;(IE浏览器)做一个层的透明解决方案：&lt;/p&gt;
+
+&lt;pre class=&quot;css&quot; name=&quot;colorcode&quot;&gt;
+/*
+ * filter 中的 StartColorStr 和 EndColorStr:
+ *    #4c000000 是 30% 透明度的 #000000 的意思
+ *    组成: # + 透明度 + 颜色
+ *    算法: Math.floor(0.6 * 255).toString(16);
+ */
+.sl-rgba{
+    background:rgba(0, 0, 0, 0.3);  /* 支持高级浏览器 */
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=&#39;#4c000000&#39;, EndColorStr=&#39;#4c000000&#39;); /* for IE */
+}
+:root .rgba{
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=&#39;#00000000&#39;, EndColorStr=&#39;#00000000&#39;); /* for IE9 */ 
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;以上解决的只是一个页面里面的半透明解决方案，解下来说为一个页面里的&lt;strong&gt;Iframe&lt;/strong&gt;做半透明。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Iframe&lt;/strong&gt;里面的样式控制：&lt;/p&gt;
+
+&lt;pre class=&quot;css&quot; name=&quot;colorcode&quot;&gt;
+html, body { background: none; }
+&lt;/pre&gt;
+
+
+&lt;p&gt;父页面的&lt;strong&gt;Iframe&lt;/strong&gt;需要添加一个属性：&lt;code class=&quot;v-code&quot;&gt;allowTransparency=&#39;true&#39;&lt;/code&gt;，这样就可以解决&lt;strong&gt;iframe&lt;/strong&gt;的半透明问题。&lt;/p&gt;
+
+&lt;h3&gt;三，IE8 下使用滤镜效果与 a 标签兼容问题&lt;/h3&gt;
+
+&lt;p&gt;如上文的半透明解决方案，使用了&lt;strong&gt;IE&lt;/strong&gt;的滤镜来解决半透明问题。但&lt;strong&gt;IE&lt;/strong&gt;滤镜的使用，在&lt;strong&gt;IE8&lt;/strong&gt;下，有时候会导致子元素里面的 &lt;strong&gt;a&lt;/strong&gt; 标签链接没有&lt;code class=&quot;v-code&quot;&gt;a:hover&lt;/code&gt;效果。&lt;/p&gt;
+
+&lt;p&gt;举个例子，为一个&lt;code class=&quot;v-code&quot;&gt;div&lt;/code&gt;层做个阴影，使用了滤镜。那么，需要对&lt;strong&gt;a&lt;/strong&gt;标签增加一个属性&lt;code class=&quot;v-code&quot;&gt;position: relative&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h3&gt;四，投影问题&lt;/h3&gt;
+
+&lt;p&gt;在 &lt;a href=&quot;http://www.aliceui.com&quot; target=&quot;_blank&quot; title=&quot;aliceui&quot;&gt;Aliceui&lt;/a&gt; 中，我们罗列出了一些解决方案，例如跨浏览器背景阴影，就很好地解决了阴影问题。现更新如下：&lt;/p&gt;
+
+&lt;pre class=&quot;css&quot; name=&quot;colorcode&quot;&gt;
+.sl-shadow {
+    /* modern web browsers */
+    -moz-box-shadow:1px 3px 12px #bbb;
+    -webkit-box-shadow:1px 3px 12px #bbb;
+    box-shadow:1px 3px 12px #bbb;
+
+    /* 一定要设置background, 不然 ie 会显示在字体上 */
+    background: #fff;
+
+    /* gte=ie8 */
+    -ms-filter:&quot;progid:DXImageTransform.Microsoft.Glow(color=#aaaaaa,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=10) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=6)&quot;;
+
+    /* lte=ie7 */
+    *filter:
+    progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=7)
+    progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=7);
+}
+:root .sl-shadow { filter:none\9; }  /* IE9 不使用滤镜 */
+.sl-shadow a { position: relative; } /* 解决上文所说的 a:hover 问题 */
+&lt;/pre&gt;
+
+
+&lt;h3&gt;五，IE 下未安装 flash 引起页面的白屏等待状态&lt;/h3&gt;
+
+&lt;p&gt;这里简单带过，在没有安装&lt;strong&gt;flash&lt;/strong&gt;的机器上运行有&lt;code class=&quot;v-code&quot;&gt;object&lt;/code&gt;的代码时，&lt;strong&gt;IE&lt;/strong&gt;里面会导致页面停留在加载&lt;strong&gt;flash&lt;/strong&gt;安装文件的进程上，直到浏览器下载完毕再渲染接下来的&lt;strong&gt;DOM&lt;/strong&gt;结构。&lt;/p&gt;
+
+&lt;p&gt;经过排查，这样的情况会导致页面刷新白屏加载一段时间：&lt;/p&gt;
+
+&lt;p&gt;1, 机器未安装&lt;strong&gt;flash&lt;/strong&gt;，页面有&lt;strong&gt;flash&lt;/strong&gt;相关代码&lt;/p&gt;
+
+&lt;p&gt;2, &lt;code class=&quot;v-code&quot;&gt;object&lt;/code&gt; 代码与下一个&lt;strong&gt;DOM&lt;/strong&gt;结构之间存在&lt;code class=&quot;v-code&quot;&gt;script&lt;/code&gt;标签。&lt;/p&gt;
+
+&lt;p&gt;初步原因分析：没有安装&lt;strong&gt;flash&lt;/strong&gt;的机器，渲染页面的时候，会请求&lt;strong&gt;flash&lt;/strong&gt;网站，发送回来安装文件。这时候在&lt;strong&gt;IE&lt;/strong&gt;下如果有&lt;code class=&quot;v-code&quot;&gt;script&lt;/code&gt;标签，浏览器可能会误认为这段脚本即将使用&lt;strong&gt;flash&lt;/strong&gt;，或者进行通讯。于是必须执行。这导致的结果就是必须得等安装文件加载好，才去渲染页面。就有白屏了。&lt;/p&gt;
+
+&lt;p&gt;解决方法：将&lt;code class=&quot;v-code&quot;&gt;script&lt;/code&gt;标签包在&lt;code class=&quot;v-code&quot;&gt;div&lt;/code&gt;里面，或者移到最底端。&lt;/p&gt;
+
+&lt;h2&gt;六、IE6 最小高度控制&lt;/h2&gt;
+
+&lt;p&gt;我们在定义一个页面的时候，或许会给这个页面一个最小的高度，通常很简单&lt;code class=&quot;v-code&quot;&gt;min-height: 500px;&lt;/code&gt;，这样就可以解决很多浏览器。但是 IE6 不认这个。好吧，简单把代码贴下，定一个高度为 520px 的容器：&lt;/p&gt;
+
+&lt;pre class=&quot;css&quot; name=&quot;colorcode&quot;&gt;
+.sl-minheight {
+    height: auto !important;
+    _height: 520px;
+    min-height: 520px;
+    _overflow: visible;
+}
+&lt;/pre&gt;
+
+
+&lt;h2&gt;七、其他&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt; 链接的空路径，有时候在思考是使用 &lt;code class=&quot;v-code&quot;&gt;javascript:void(0);&lt;/code&gt;，还是&lt;code class=&quot;v-code&quot;&gt;javascript:;&lt;/code&gt;, 其实在有&lt;strong&gt;Iframe&lt;/strong&gt;的页面，这两种写法在&lt;strong&gt;IE6&lt;/strong&gt;下，触发事件都会阻塞页面的渲染进程的。所以使用&lt;code class=&quot;v-code&quot;&gt;#&lt;/code&gt;会更好。&lt;/p&gt;
+
+&lt;p&gt;日后更多积累，再补充。(2012.06.12)&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Jekyll 博客主题之 Black Cube</title>
+     <link href="http://singco.github.io/2012/05/04/the-jekyll-blog-theme-black-cube.html"/>
+     <updated>2012-05-04T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/05/04/the-jekyll-blog-theme-black-cube</id>
+     <content type="html">&lt;p&gt;blogTheme 项目是我之前在 Github 上建立的一个博客主题，这次新增设计好的黑色主题 Black Cube, 希望大家喜欢。&lt;/p&gt;
+
+&lt;h3&gt;主题预览&lt;/h3&gt;
+
+&lt;p&gt;如果你喜欢这个主题，再去看下文吧：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/resources/blackCubeTheme.jpg&quot; alt=&quot;Black Cube Theme&quot; class=&quot;img-center&quot; width=&quot;580px&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;个性化设置&lt;/h3&gt;
+
+&lt;p&gt;该主题提供了比较方便的设置方法，主要在于修改&lt;code class=&quot;v-code&quot;&gt;_confim.yml&lt;/code&gt;。包括修改分页数量，网站地址，博客名称，博客简介等。&lt;/p&gt;
+
+&lt;h3&gt;使用方法&lt;/h3&gt;
+
+&lt;p&gt;您可以 clone 该主题的源代码，在您的 jekyll 服务器上运行 &lt;code class=&quot;v-code&quot;&gt;jekyll --server&lt;/code&gt;，然后在浏览器上访问就可以看到了。或者 fork 到您的 github 博客上，就可以看到页面效果。
+增加博客文章，需要您在 &lt;code class=&quot;v-code&quot;&gt;_posts&lt;/code&gt; 下编写文章就好。&lt;/p&gt;
+
+&lt;h3&gt;更多需求？&lt;/h3&gt;
+
+&lt;p&gt;恩，给我发邮件，我比较忙，但会及时回复你的:D&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>快速创建漂亮的项目页面</title>
+     <link href="http://singco.github.io/2012/04/23/quickly-create-beautiful-github-pages.html"/>
+     <updated>2012-04-23T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/04/23/quickly-create-beautiful-github-pages</id>
+     <content type="html">&lt;p&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt; 如今提供快速编辑的功能，方便项目创建一个在线的页面。今天小看了下，很赞，在此推荐给大家。其实现在创建一个页面，只需要 3 个步骤，也不用担心页面长得不好看了。&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;The easiest way to quickly publish beautiful pages for you and your projects.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;一，选择自动生成页面&lt;/h3&gt;
+
+&lt;p&gt;进入项目管理页面，选择自动生成页面：
+&lt;img class=&quot;img-center&quot; src=&quot;/resources/autopage-step-2.png&quot; alt=&quot;create-github-page2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;二，填写项目对应的信息&lt;/h3&gt;
+
+&lt;p&gt;创建一个页面现在已经提供在线编辑的功能了，非常不错。同时支持 markdown 语法。当你填写完你的项目信息之后，点击 &lt;code class=&quot;v-code&quot;&gt;Continue to Layouts&lt;/code&gt; 进入下一步。
+&lt;img class=&quot;img-center&quot; src=&quot;/resources/autopage-step-3.png&quot; alt=&quot;create-github-page3&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;三，选择你喜欢的模板&lt;/h3&gt;
+
+&lt;p&gt;接下来你将进入一个模板页面，这里已经帮你生成了预览。你可以选择 8 套来自 github的开发人员和设计师设计出来的漂亮的模板。选择好之后，点击右上角的确定的勾就 ok 了。
+&lt;img class=&quot;img-center&quot; src=&quot;/resources/autopage-step-4.png&quot; alt=&quot;create-github-page4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;恩，如此简单！&lt;/p&gt;
+
+&lt;h3&gt;四，八套美丽的模板&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Hack&lt;/strong&gt; by &lt;a href=&quot;https://github.com/bleikamp&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Ben Bleikamp&lt;/a&gt;
+&lt;a href=&quot;http://sundaykofax.github.com/baby-legs/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img class=&quot;img-center&quot; alt=&quot;Hack theme&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-hack.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Merlot&lt;/strong&gt; by &lt;a href=&quot;https://github.com/cameroCameron&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Cameron McEfee&lt;/a&gt;
+&lt;a href=&quot;http://cameronmcefee.github.com/headsmart/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img class=&quot;img-center&quot; alt=&quot;Merlot theme&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-merlot.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Slate&lt;/strong&gt; by &lt;a href=&quot;https://github.com/jsncJason&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Jason Costello&lt;/a&gt; (he also designed the GitHub Page Generator!)
+&lt;a href=&quot;http://matthewmccullough.github.com/git-workshop/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;Slate theme&quot; class=&quot;img-center&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-slate.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Time Machine&lt;/strong&gt; by &lt;a href=&quot;https://github.com/jonrohan&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Jon Rohan&lt;/a&gt;
+&lt;a href=&quot;http://puppet-lint.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;Time Machine theme&quot; class=&quot;img-center&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-time-machine.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Leap Day&lt;/strong&gt; by &lt;a href=&quot;https://github.com/mattgraham&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Matt Graham&lt;/a&gt;
+&lt;a href=&quot;http://dewski.github.com/json_builder/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;Leap Day theme&quot; class=&quot;img-center&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-leap-day.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Midnight&lt;/strong&gt; by &lt;a href=&quot;https://github.com/mattgraham&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Matt Graham&lt;/a&gt;
+&lt;a href=&quot;http://briandoll.github.com/change-inside-surroundings.vim/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;Midnight theme&quot; class=&quot;img-center&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-midnight.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Minimal&lt;/strong&gt; by &lt;a href=&quot;https://github.com/orderedlist&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Steve Smith&lt;/a&gt;
+&lt;a href=&quot;http://blog.vmarti.net/sundown/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;Minimal theme&quot; class=&quot;img-center&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-minimal.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Modernist&lt;/strong&gt; by &lt;a href=&quot;https://github.com/orderedlist&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Steve Smith&lt;/a&gt;
+&lt;a href=&quot;http://zachholman.com/spark/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;Modernist theme&quot; class=&quot;img-center&quot; src=&quot;https://github-images.s3.amazonaws.com/blog/2012/page-generator-theme-modernist.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>使用 Jekyll 提高 Demo 开发效率</title>
+     <link href="http://singco.github.io/2012/03/11/use-jekyll-for-web-develop.html"/>
+     <updated>2012-03-11T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/03/11/use-jekyll-for-web-develop</id>
+     <content type="html">&lt;p&gt;使用 Jekyll 来提高 Demo 的开发效率？也许真有点儿可能喔。经过一个星期的实践，我感
+觉还是挺方便的。今天分享下。&lt;/p&gt;
+
+&lt;h3&gt;Demo 开发遇到的问题&lt;/h3&gt;
+
+&lt;p&gt;在前端开发的过程中，前期的 Demo 制作，需要依据 PRD 和视觉稿产出相应的 HTML 页面
+。很多时候，由于环境的问题，使用单纯的 HTML 来编写页面，效率比较慢。或者适当地使
+用 Copy And Write 的方式，也不是很灵活。&lt;/p&gt;
+
+&lt;p&gt;总结我个人遇到的一些妨碍效率的问题，有下面几点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;头部底部只能通过 Copy &amp;amp; write 的方式应用到各个页面，页面多的话，需要修改很多次。不灵活。&lt;/li&gt;
+&lt;li&gt;编写模板的时候，需要再从 Demo 筛选出对应的模块，重复性成本高。&lt;/li&gt;
+&lt;li&gt;使用 PHP 或者其他语言进行编写 Demo，似乎小题大作了。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;如何使用 Jekyll 开发 Demo ？&lt;/h3&gt;
+
+&lt;p&gt;恩，也许你还不知道啥是 &lt;a href=&quot;http://www.jekyllrb.com&quot; target=&quot;_blank&quot;
+rel=&quot;nofollow&quot; title=&quot;Jekyll&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/a&gt;，没关系，
+&lt;strong&gt;PIZn.Me&lt;/strong&gt; 就是使用 &lt;strong&gt;Jekyll&lt;/strong&gt; 搭建起来的。你可以在这里找到 &lt;strong&gt;Jekyll&lt;/strong&gt; 的很多相关文章。&lt;/p&gt;
+
+&lt;p&gt;Ok，基于平时自己遇到的一些问题，还有 Jekyll 的方便性，我尝试着这样去做页面的开发，舒服多了，效率也提上来了。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本地安装 Jekyll 。&lt;/li&gt;
+&lt;li&gt;新建项目文件夹，至少需要下面几个文件：&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+xxx项目
+    |--_layouts(布局)
+        |--default.html
+    |--_includes(模块化)
+        |--head.html
+        |--foot.html
+    |--css
+    |--js
+    |--html
+    |--images
+    |--_config.yml(配置文件)
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;通过布局来配置我们的公用模块，简化每个 Demo 的工作量。&lt;/li&gt;
+&lt;li&gt;通过 include 来规划组件化模块，一个页面可以看成是很多组件构建起来的。&lt;/li&gt;
+&lt;li&gt;在项目文件夹运行&lt;code class=&quot;v-code&quot;&gt;jekyll --server&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;待服务启动成功到浏览器访问&lt;code class=&quot;v-code&quot;&gt;localhost:4000/你的页面&lt;/code&gt;，进行测试和其他工作。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;人无完人，适合才是好的&lt;/h3&gt;
+
+&lt;p&gt;每个人的工作方式都不一样。我个人觉得这样挺好的，必要的适合再建个项目发出来。但也有个不足，就是每次测试需要输入&lt;code class=&quot;v-code&quot;&gt;jekyll --server&lt;/code&gt;，其他的还好。&lt;/p&gt;
+
+&lt;p&gt;使用 Jekyll 来提高前端开发 Demo 效率，如果你觉得还不错，或者不懂，或者有新的想法，欢迎交流。&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>为 Jekyll 博客添加静态搜索</title>
+     <link href="http://singco.github.io/2012/03/04/static-search-article-on-jekyll.html"/>
+     <updated>2012-03-04T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/03/04/static-search-article-on-jekyll</id>
+     <content type="html">&lt;p&gt;今晚吃完饭后，为博客做了简单的搜索功能，因为做的大多是前台方面的工作，所以我个人
+将其称之为静态搜索。简单介绍下。&lt;/p&gt;
+
+&lt;h3&gt;一、生成 search.xml&lt;/h3&gt;
+
+&lt;p&gt;遍历 &lt;strong&gt;Jekyll&lt;/strong&gt; 博客中的所有文章，获取其标题、日期和文章链接，整合
+到一个 &lt;strong&gt;xml&lt;/strong&gt; 文件中。这个 &lt;strong&gt;xml&lt;/strong&gt; 文件我们可将其命名为&lt;code
+class=&quot;v-code&quot;&gt;search.xml&lt;/code&gt;，以便我们后续的工作。&lt;/p&gt;
+
+&lt;p&gt;具体的写法如下：&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+//jekyll 语法前反斜杆是为了转义输出，请去掉
+&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;
+&amp;lt;articles&amp;gt;
+{\% for post in site.posts %\}
+&amp;lt;article&amp;gt;
+    &amp;lt;title&amp;gt;{\{ post.title }\}&amp;lt;/title&amp;gt;
+    &amp;lt;url&amp;gt;{\{ site.url }\}{\{ post.url }\}&amp;lt;/url&amp;gt;
+    &amp;lt;date&amp;gt;{\{ post.date | date_to_utc | date: &#39;%Y-%m-%d&#39;}\}&amp;lt;/date&amp;gt;
+&amp;lt;/article&amp;gt;
+{\% endfor %\}
+&amp;lt;/articles&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;h3&gt;二、添加 DOM 结构&lt;/h3&gt;
+
+&lt;p&gt;DOM 结构就是 HTML 代码啦。你可以添加到你希望的地方，但要注意一点，就是你添加 DOM结构的地方要有相应的 CSS 链接和 JS 链接。我把这个简单的搜索功能放在 Archive.html里面，不清楚的同学可以去看源代码哈。&lt;/p&gt;
+
+&lt;p&gt;添加 &lt;strong&gt;Jquery UI&lt;/strong&gt; 样式和 &lt;strong&gt;JS&lt;/strong&gt; 链接。我在这里采用的是 jquery-ui-1.8.18.custom 版本。DOM 结构保存在同一个页面。&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+//样式表
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/css/jquery-ui-1.8.18.custom.css&quot; type=&quot;text/css&quot;
+/&amp;gt;
+
+//js
+&amp;lt;script src=&quot;/js/jquery-ui-1.8.18.custom.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+//添加 DOM
+&amp;lt;input id=&quot;J_search&quot; placeholder=&quot;Simple Search&quot;/&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;h3&gt;三、设置全局地址&lt;/h3&gt;
+
+&lt;p&gt;在 &lt;strong&gt;Jekyll&lt;/strong&gt; 博客的根目录下的 &lt;code class=&quot;v-code&quot;&gt;config.yml&lt;/code&gt; 添加你的博客的全局基本地址。就一句话就 Ok 哈！&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+url: http://www.pizn.me
+&lt;/pre&gt;
+
+
+&lt;h3&gt;四、通过 Javascript 实现搜索功能&lt;/h3&gt;
+
+&lt;p&gt;简单说明下原理：通过在输入框输入关键词，&lt;strong&gt;Ajax&lt;/strong&gt; 匹配 search.xml 中的文章标题里面的词语，
+若是，在输入框下方显示出标题。通过选择标题，跳转到搜索到的文章页面。&lt;/p&gt;
+
+&lt;p&gt;我的实现方式是这样的，你也可以通过修改 &lt;code class=&quot;v-code&quot;&gt;autocomplete&lt;/code&gt;
+的实例来实现不同的展现效果。&lt;/p&gt;
+
+&lt;pre class=&quot;js&quot; name=&quot;colorcode&quot;&gt;
+$(function() {
+        $.ajax({
+            url: &quot;search.xml&quot;,
+            dataType: &quot;xml&quot;,
+            success: function( xmlResponse ) {
+                var data = $( &quot;article&quot;, xmlResponse ).map(function() {
+                    return {
+                        value: $( &quot;title&quot;, this ).text() + &quot;, &quot; +
+                            ( $.trim( $( &quot;date&quot;, this ).text() ) ),
+                        desc: $(&quot;description&quot;, this).text(),
+                        url: $(&quot;url&quot;, this).text()
+                    };
+                }).get();
+
+                $( &quot;#J_search&quot; ).autocomplete({
+                    source: data,
+                    minLength: 0,
+                    select: function( event, ui ) {
+                        window.location.href = ui.item.url;
+                    }
+                });
+            }
+        });
+    });
+&lt;/pre&gt;
+
+
+&lt;h3&gt;五、测试&lt;/h3&gt;
+
+&lt;p&gt;在输入框中输入你所知道的一些关键词，如果输入框下拉菜单有内容，选中它，成功跳转到对应的文章页面。那么，你成功了。&lt;/p&gt;
+
+&lt;h3&gt;六、总结&lt;/h3&gt;
+
+&lt;p&gt;这是一个很简单的实现方法，因为就今晚几个小时做出来的，所以可能还有很多不适用性。兼容性方面还没做好测试，只兼容 Firefox 和 Chrome ，还没完善的一个方面是出错处理，有空再补上。&lt;/p&gt;
+
+&lt;p&gt;遗憾的是暂时只支持英文关键词搜索，后续，恩，中英文。&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Vim 常用命令总结</title>
+     <link href="http://singco.github.io/2012/03/03/vim-commonly-used-command.html"/>
+     <updated>2012-03-03T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/03/03/vim-commonly-used-command</id>
+     <content type="html">&lt;p&gt;使用 &lt;strong&gt;Vim&lt;/strong&gt; 的时间不长，但如今已经离不开熟悉的 &lt;strong&gt;Vim&lt;/strong&gt; 编辑模式了。 &lt;strong&gt;Vim&lt;/strong&gt; 的学习曲线是非常陡的，一开始学习的时候，面对很多的操作命令要去记住，常常望而却步。&lt;/p&gt;
+
+&lt;p&gt;其实，只要记住一些常用的命令，加之在工作中坚持使用 &lt;strong&gt;Vim&lt;/strong&gt; 进行编辑，很快就能得心应手了。&lt;/p&gt;
+
+&lt;h3&gt;光标移动(Cursor Movement)&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody &gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释）&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;h,j,k,l&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;h&lt;/code&gt;表示往左，&lt;code class=&quot;v-code&quot;&gt;j&lt;/code&gt;表示往下，&lt;code class=&quot;v-code&quot;&gt;k&lt;/code&gt;表示往右，&lt;code class=&quot;v-code&quot;&gt;l&lt;/code&gt;表示往上&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;Ctrl&lt;/code&gt;+&lt;code class=&quot;v-code&quot;&gt;f&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;上一页&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;Ctrl&lt;/code&gt;+&lt;code class=&quot;v-code&quot;&gt;b&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;下一页&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;w&lt;/code&gt;, &lt;code class=&quot;v-code&quot;&gt;e&lt;/code&gt;, &lt;code class=&quot;v-code&quot;&gt;W&lt;/code&gt;, &lt;code class=&quot;v-code&quot;&gt;E&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;跳到单词的后面，小写包括标点&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;v-code&quot;&gt;B&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;以单词为单位往前跳动光标，小写包含标点&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;O&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;开启新的一行&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;^&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;一行的开始&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;$&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;一行的结尾&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;gg&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;文档的第一行&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code class=&quot;v-code&quot;&gt;[N]G&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;文档的第N行或者最后一行&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;插入模式(Insert Mode)&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;i&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;插入到光标前面&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;I&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;插入到行的开始位置&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;a&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;插入到光标的后面&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;A&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;插入到行的最后位置&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;o&lt;/code&gt;, &lt;code class=&quot;v-code&quot;&gt;O&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;新开一行&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;Esc&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;关闭插入模式&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;编辑(Editing)&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释）&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;r&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;在插入模式替换光标所在的一个字符&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;J&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;合并下一行到上一行&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;s&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;删除光标所在的一个字符, 光标还在当行&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;S&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;删除光标所在的一行，光标还在当行，不同于&lt;code class=&quot;v-code&quot;&gt;dd&lt;/code&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;u&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;撤销上一步操作&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;ctrl&lt;/code&gt;+&lt;code class=&quot;v-code&quot;&gt;r&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;恢复上一步操作&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;.&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;重复最后一个命令&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;~&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;变换为大写&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;[N]&gt;&gt;&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;一行或N行往右移动一个tab&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;[N]&lt;&lt;&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;一行或N行往左移动一个tab&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;关闭(Exiting)&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;:w&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;保存&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;:wq&lt;/code&gt;,
+                &lt;code class=&quot;v-code&quot;&gt;:x&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;保存并关闭&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;:q&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;关闭（已保存）&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;:q!&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;强制关闭&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;搜索(Search)&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;/pattern&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;搜索（非插入模式)&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;?pattern&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;往后搜索&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;n&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;光标到达搜索结果的前一个目标&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;N&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;光标到达搜索结果的后一个目标&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;视觉模式(Visual Mode)&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;v&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;选中一个或多个字符&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;V&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;选中一行&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;剪切和复制(Cut and Paste)&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;    
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;dd&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;删除一行&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;dw&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;删除一个单词&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;x&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;删除后一个字符&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;X&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;删除前一个字符&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;D&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;删除一行最后一个字符&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;[N]yy&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;复制一行或者N行&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;yw&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;复制一个单词&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;p&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;粘贴&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;窗口操作&lt;/h3&gt;
+
+&lt;table width=&quot;100%&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;20%&quot;&gt;命令&lt;/th&gt;
+            &lt;th width=&quot;80%&quot;&gt;作用（解释)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;:split&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;水平方向分割出一个窗口&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;:vsplit&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;垂直方向分割出一个窗口&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;:close&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;关闭窗口&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code class=&quot;v-code&quot;&gt;Ctrl&lt;/code&gt;+&lt;code class=&quot;v-code&quot;&gt;W&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;切换窗口, &lt;code class=&quot;v-code&quot;&gt;h&lt;/code&gt;到左边窗口，&lt;code class=&quot;v-code&quot;&gt;j&lt;/code&gt;到下方窗口，&lt;code class=&quot;v-code&quot;&gt;k&lt;/code&gt;到上方窗口，&lt;code class=&quot;v-code&quot;&gt;l&lt;/code&gt;到右边窗口&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+</content>
+   </entry>
+   
+   <entry>
+     <title>搭建 Jekyll 博客的一些小技巧</title>
+     <link href="http://singco.github.io/2012/03/01/some-tips-for-jekyll-blog.html"/>
+     <updated>2012-03-01T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/03/01/some-tips-for-jekyll-blog</id>
+     <content type="html">&lt;p&gt;在搭建 &lt;strong&gt;PIZn.Me&lt;/strong&gt; 的时候，我就尝试更好地规划自己的这个 &lt;strong&gt;Jekyll&lt;/strong&gt; 博客。回过头来，总结了几点个人觉得有用的小技巧，希望对 &lt;strong&gt;Jekyll&lt;/strong&gt; 爱好者有所帮助，也欢迎一起学习讨论。&lt;/p&gt;
+
+&lt;h3&gt;一、使用 include 拆分你的页面结构&lt;/h3&gt;
+
+&lt;p&gt;先为你的博客建立 &lt;code class=&quot;v-code&quot;&gt;_includes&lt;/code&gt; 文件夹。&lt;/p&gt;
+
+&lt;p&gt;我们的博客布局，一般是上，中，下布局，在 _layouts 中，我们会使用&lt;code
+class=&quot;v-code&quot;&gt;{{ content }}&lt;/code&gt; 读取中间这部分的内容。而中间这部分，又可以
+分为左右布局，假如我们的侧边栏命名为 aside ，我们可以通过&lt;code class=&quot;v-code&quot;&gt;{\% include aside.html %}&lt;/code&gt;的方式来读取我们设置在 include 文件夹里面的文件。&lt;/p&gt;
+
+&lt;p&gt;在我的博客中，我将侧边栏 aside 用 include 的方式抽取出来，然后在 aside 里面，又抽出了 repost，face, follow 等几个小挂件。&lt;/p&gt;
+
+&lt;h3&gt;二、YAML 的广泛使用&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yaml.org/&quot; targt=&quot;_blank&quot; rel=&quot;nofollow&quot; title=&quot;YAML&quot;&gt;YAML&lt;/a&gt;是 Jekyll 的一个重要组成部分。 &lt;strong&gt;YAML&lt;/strong&gt; 是一种直观的能够被电脑识别的的数据数据序列化格式，他并且容易被人类阅读，容易和脚本语言交互的。&lt;/p&gt;
+
+&lt;p&gt;用我自己的理解，我将它理解为一些可自定义的 &quot;钩子&quot;，在 Jekyll 博客中的文件头部的一个 &quot;区块&quot; 。使用在 _confiy.yml 配置文件中，在每一篇 post 中，在每一个静态页面中。&lt;/p&gt;
+
+&lt;p&gt;例如下面的代码片段：&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+name: PIZn
+age: 24
+school:
+    name: GDUT
+    address: GuangZhou
+follow me:
+    - github
+    - twitter
+    - weibo
+&lt;/pre&gt;
+
+
+&lt;h3&gt;三、为特定的页面配置特定的内容&lt;/h3&gt;
+
+&lt;p&gt;首先说下为什么要这样做。&lt;/p&gt;
+
+&lt;p&gt;由于我的博客有几个页面（指的是区别与文章页面的介绍页面，例如category，plugin，contact等），每个页面都可以参照第一点来 &quot;拆&quot;。页面的头部，底部都是公用的，写在 defalt.html 里面。每个不同的页面有不同的展现方式，在通过&lt;code class=&quot;v-code&quot;&gt;include&lt;/code&gt; &quot;聚&quot; 回来的时候，就会发现一个 defalut.html是不够的，因为侧边栏不同呀，页面展示效果不用呀等多种原因（虽然你可以确保风格一致）。&lt;/p&gt;
+
+&lt;p&gt;其次，寻求解决的方法。&lt;/p&gt;
+
+&lt;p&gt;恩，你可以很愉快地在 _layouts 里面添加尽可能多的不同的布局。但那样管理和组织起来比较麻烦。&lt;/p&gt;
+
+&lt;p&gt;所以你可以使用 YAML 为你的页面添加特定的 &quot;钩子&quot;，然后在 default.html 页面通过判断来输出相对的内容。例如我在 contact.html 页面写上这样的钩子&lt;code class=&quot;v-code&quot;&gt;isContact: true&lt;/code&gt;，然后我在为 contact 页面配置侧边栏的时候，我可以为其配置特定的内容，例如通过下面的代码配置出我的相片：&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+//为了避免代码被编译，我在这里的 Jekyll 语法中间加上反斜干
+{\% if(page.isContact) %\}
+    &amp;lt;section class=&quot;violet-photo&quot;&amp;gt;
+        &amp;lt;img src=&quot;xxxx.jpg&quot; alt=&quot;xxx&quot; /&amp;gt;
+    &amp;lt;/section&amp;gt;
+{\% else %\}
+    &amp;lt;p&amp;gt;No Photo&amp;lt;p&amp;gt;
+{\% endif %\}
+&lt;/pre&gt;
+
+
+&lt;p&gt;其实就是这么简单，通过判断为真，来为特定的页面配置特定的内容。&lt;/p&gt;
+
+&lt;h3&gt;四、为文章详细页添加最新文章列表，但不包括本文章&lt;/h3&gt;
+
+&lt;p&gt;假如您不明白这个小标题的意思，请看这个页面的侧边栏。是不是没有这篇文章的链接呢？&lt;/p&gt;
+
+&lt;p&gt;输出博客文章列表一般可以使用这个语句&lt;code class=&quot;v-code&quot;&gt;for post in site.posts limit:6&lt;/code&gt;，这里的&lt;code class=&quot;v-code&quot;&gt;site.posts&lt;/code&gt;是重点，它会遍历站点里面的所有文章，然后输出。&lt;/p&gt;
+
+&lt;p&gt;但换了个场景，我们在文章详细页面，本来这个页面已经在看了，再次输出该页面的链接，是否就没有意义？所以还可以使用&lt;code class=&quot;v-code&quot;&gt;site.related_posts&lt;/code&gt;来输出。这样会过滤掉当前的文章。&lt;/p&gt;
+
+&lt;h3&gt;五、用好你的 config.yml&lt;/h3&gt;
+
+&lt;p&gt;在博客根目录下的&lt;code class=&quot;v-code&quot;&gt;config.yml&lt;/code&gt;配置文件，其实可以帮我们做很多有意义的事情，主要是最初的配置，还有定义全局的数据。&lt;/p&gt;
+
+&lt;p&gt;默认的配置文件里面的内容最好不要改动，在使用插件的时候，假如你将&lt;code class=&quot;v-code&quot;&gt;safe&lt;/code&gt;设置为&lt;code class=&quot;v-code&quot;&gt;true&lt;/code&gt;，那么可能你的插件就无法完成正常的任务。&lt;/p&gt;
+
+&lt;p&gt;但有些还是需要自定义的，例如&lt;code class=&quot;v-code&quot;&gt;permalink&lt;/code&gt;，用来自定义url的格式，这对固定链接有重要作用。我们也可以定义全局 title, url, feed, description等。最终都会以&lt;code class=&quot;v-code&quot;&gt;site.xxx&lt;/code&gt;来调用。&lt;/p&gt;
+
+&lt;h3&gt;六、灵活地为页面配置 CSS 和 Javascript&lt;/h3&gt;
+
+&lt;p&gt;我们的 Jekyll 博客，可能有很多不同的页面，展现、交互等形式都可能不同。那么，我们除了可以通过第三点讲过的 ”钩子&quot; 方法来达到目的之外，还有另外的一种方法，为我们的页面配置不同的 CSS 和 Javascript 。&lt;/p&gt;
+
+&lt;p&gt;首先，在 default.html 页面的头部和底部写上另一种形式的 “钩子“。如下：&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+//一般，我们将 CSS 放在头部
+{\% for css in page.css %\}
+    &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;{\{ css }\}&quot; type=&quot;text/css&quot; /&amp;gt;
+{\% endfor %\}
+
+//一般，我们将 Javascript 放在底部
+{\% for js in page.javascript %\}
+    &amp;lt;script type=&quot;text/javascript&quot; src=&quot;{\{ js }\}&quot; &amp;gt;&amp;lt;/script&amp;gt;
+{\% endfor %\}
+&lt;/pre&gt;
+
+
+&lt;p&gt;其次，在我们的特定页面，在文件的头部 YAML 部分添加属于该页面的 CSS 或者 Javascript 链接。&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+javascript:
+    - /javascript/jquery.js
+    - /javascript/violet.js
+&lt;/pre&gt;
+
+
+&lt;h3&gt;七、其他&lt;/h3&gt;
+
+&lt;p&gt;假如你有其他更好的小技巧，一起分享哈！&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>为 Jekyll 博客添加 category 分类</title>
+     <link href="http://singco.github.io/2012/02/23/use-category-plugin-for-jekyll-blog.html"/>
+     <updated>2012-02-23T00:00:00+08:00</updated>
+     <id>http://singco.github.io/2012/02/23/use-category-plugin-for-jekyll-blog</id>
+     <content type="html">&lt;p&gt;为了深化 &lt;strong&gt;Jekyll&lt;/strong&gt; 博客里面的内联关系，我们通常会对一篇文章进行分类，贴标签等，这样能做到文章的更好的区分和快速查找到相关文章。&lt;/p&gt;
+
+&lt;p&gt;假如您也想在你的博客上实现这样的效果（如右图）, 请看下文。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/resources/category-list.jpg&quot; alt=&quot;categroy list&quot; class=&quot;img-right&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;在某些地方，例如文章页面，你可能希望在侧边栏添加这样的功能。有一个分类目录，还能显示出分类文章的篇数。&lt;/p&gt;
+
+&lt;h3&gt;一、为文章添加分类&lt;/h3&gt;
+
+&lt;p&gt;在编辑一篇文章的时候，我们会在文章的头部写上一些 key 值, 同样的道理，我们可以为
+这篇文章添加上 category 来分类。&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+---
+layout: post
+title: 为 Jekyll 博客添加 category 分类
+category: Jekyll
+---
+&lt;/pre&gt;
+
+
+&lt;h3&gt;二、添加分类功能到你希望它出现的地方&lt;/h3&gt;
+
+&lt;p&gt;在这里，你只需要把下面的代码拷贝到你的博客中，就能看到你添加的文章出现的分类了。&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+&amp;lt;h4&amp;gt;Category&amp;lt;/h4&amp;gt;
+&amp;lt;ul&amp;gt;
+    //这里使用了 Jekyll 语法，会被编译，所以加多个&quot;\&quot;
+    {\% for category in site.categories %\}
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/categories/{\{ category | first }\}/&quot; title=&quot;view all
+posts&quot;&amp;gt;{\{ category | first }\} {\{ category | last | size }\}&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    {\% endfor %\}
+&amp;lt;/ul&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;h3&gt;三、为博客添加 category 插件&lt;/h3&gt;
+
+&lt;p&gt;添加 category 插件很简单，只要在根目录下建立一个 &quot;plugins&quot; 文件夹，然后拷贝category_plugin.rb 文件到里面就好了。category_plugin 文件的源代码可以在&lt;a href=&quot;https://gist.github.com/1899497&quot; title=&quot;The gist for category plugin&quot; target=&quot;_blank&quot; &gt;这里&lt;/a&gt;查看到。&lt;/p&gt;
+
+&lt;p&gt;这个插件的作用有两点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;建立 categories 文件夹, 遍历所有文章的分类，再根据分类建立分类的文件夹。&lt;/li&gt;
+&lt;li&gt;为每个分类建立一个 index.html 文件, 该文件的模板来自 layouts 里面的 category_index.html，因此您需要在 layouts 里面添加符合自己博客主题的文件。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;四、添加 category_index.html 模板&lt;/h3&gt;
+
+&lt;p&gt;这个模板是为了将我们的分类主页显示出来，显示的内容是一个分类的所有文章。也就是分
+类列表的链接地址。具体使用到的代码如下：&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot; name=&quot;colorcode&quot;&gt;
+{\% for post in site.categories.[page.category] %\}
+    {\{ post.date }\} {\{ post.title }\}
+{\% endfor %\}
+&lt;/pre&gt;
+
+
+&lt;p&gt;你也可以参考我的分类主页来设计自己的分类主页，具体的效果，我截个图看看。我的分类主页的源代码在&lt;a href=&quot;https://gist.github.com/1899544&quot; target=&quot;_blank&quot; title=&quot;The gist for category index page&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/resources/category-index.jpg&quot; alt=&quot;category index&quot; class=&quot;img-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;五、我们写的代码最终是如何完成工作的？&lt;/h3&gt;
+
+&lt;p&gt;Ok, 在完成上面的步骤之后，我们需要编译一遍。在终端 cd 到你的博客目录，输入 &lt;code class=&quot;v-code&quot;&gt;jekyll --server&lt;/code&gt; ，然后再回头看看我们的博客文件夹。&lt;/p&gt;
+
+&lt;p&gt;在 site 文件夹下，你会发现多了一个 categories 文件，里面就有包含的所有分类文件夹。同时，你也会发现在与 categories 同级的文件下也有这些分类文件夹，但他们存放的是我们的所有分类文章。&lt;/p&gt;
+
+&lt;p&gt;还有个变化，就是我们的文章链接 URL，添加了分类的文章，在日期前面会多了分类的名称。例如：pizn.me/Jekyll/2012/02/23/user-category-plugin-for-jekyll-blog.html&lt;/p&gt;
+
+&lt;h3&gt;六、需要注意的，还有我疑惑的（需要大家帮忙看看的）&lt;/h3&gt;
+
+&lt;p&gt;因为添加了插件，所以要确保你的 config.yml 文件里面的 safe 属性值为 false，因为这
+个属性值为 true 的时候是使自定义插件失效。&lt;/p&gt;
+
+&lt;p&gt;我疑惑的是，我在本地完成上面的步骤之后，分类列表的每个分类链接可以成功到达分类的详细列表页面（即 category_index.html)，然而我上传到 github，没有报错，却无法到达那个页面，显示 404 错误。求大牛帮忙解决。&lt;/p&gt;
+</content>
+   </entry>
+   
+ 
+</feed>
+

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://singco.github.io/</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://singco.github.io/archives.html</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://singco.github.io/plugins.html</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://singco.github.io/works.html</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://singco.github.io/contact.html</loc>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2013/10/29/blog-change.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/10/26/PNG-Loading.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/06/12/some-solution-for-ie-hack.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/05/04/the-jekyll-blog-theme-black-cube.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/04/23/quickly-create-beautiful-github-pages.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/03/11/use-jekyll-for-web-develop.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/03/04/static-search-article-on-jekyll.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/03/03/vim-commonly-used-command.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/03/01/some-tips-for-jekyll-blog.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/02/23/use-category-plugin-for-jekyll-blog.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/01/16/the-seo-for-jekyll-blog.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2012/01/09/violet-is-comming.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/12/21/wordpress-database-functions.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/12/05/wordpress-meta.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/12/05/some-github-api.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/12/02/hello-pizn-me.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/30/install-jekyll.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/25/DlHighlight-helpers-update.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/24/install-nodejs.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/24/hello-node.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/22/xampp-security.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/22/mac-wget.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/22/mac-macports.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/22/mac-git-and-github.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/15/use-disqus-for-your-post.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/11/12/github-notes.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/10/11/sl-alpha.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/10/02/start-github-on-window.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/09/24/jekyll-more.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/09/23/markdown.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/09/22/create-github-page.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://singco.github.io/2011/09/20/hello-world.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+</urlset>

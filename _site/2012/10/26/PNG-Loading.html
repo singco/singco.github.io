@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+     **
+     * Author:         掌心
+     * Contact:        zhanxin.info@gmail.com
+     * Theme Name:     Violet ( Violet 主题代表着一种颜色，一种情感，还有一种美)
+     * Create Date:    2013.10
+     **
+    -->
+    <meta charset="utf-8" />
+    <title>
+        
+            使用 PNG 图片制作动态 Loading
+                 
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="" />
+    <meta name="description" content="使用 CSS3 和 PNG 图片实现 GIF Loading 效果。" />
+    <meta name="keywords" content="CSS3,PNG,Loading" />
+    <!-- //页面样式 -->
+    <link rel="stylesheet" href="http://singco.github.io/themes/violet/css/style.css" type="text/css" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="http://singco.github.io/themes/violet/images/favicon.ico" type="image/x-icon" />
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body id="violet">
+    <div class="page-wrapper">
+        <section class="head" id="violet-head">
+            <header class="header" id="violet-header">
+                <h1 class="logo"><a href="http://singco.github.io">云柯</a></h1>
+                <h2 class="subtitle">Welcome to yunke's site.</h2>
+            </header>
+            <nav class="nav" id="violet-nav">
+                <ul class="nav-list">
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="/index.html">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="/archives.html">
+                            文章归档
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="/works.html">
+                            作品
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="http://www.zhanxin.info/contact.html">
+                            联系我
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        <a href="https://github.com/pizn/pizn.github.com">
+                            博客源代码
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+            </nav>
+        </section>
+        <section class="main" id="violet-main">
+            <article class="main-article main-article-page">
+    <div class="violet-title">
+        <h3 class="violet-title-item">使用 PNG 图片制作动态 Loading</h3>
+    </div>
+    <div class="violet-post">
+        <p class="main-article-meta"><time pubdate="">2012-10-26</time></p>
+        <div class="main-article-contant">
+            <p>曾经遇到过在一个 GIF 图片里面制作一个半透明的 Loading，无论怎么折腾，总有锯齿，非常不好处理。最后无奈地使用了非半透明的“菊花”，视觉有所降级。</p>
+
+<p>其实如果不兼容 IE 的话，还是可以使用 CSS3 + PNG 图片完成这个动态的 GIF Loading 的。具体效果见 <a href="http://pizn.github.io/demo/loading.html" target="_blank" title="demo">DEMO</a>。</p>
+
+<p>实现的方法和代码如下：</p>
+
+<pre name="colorcode" class="css">
+#loading {
+     width: 36px;
+     height: 36px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin: -18px 0 0 -18px;
+     text-indent: -9999em;
+     overflow: hidden;
+     /** loading 图片地址 **/
+     background: url(loading.png) no-repeat 0 0;
+     /** webkit **/
+     -webkit-animation-name: loadRotate;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: linear;
+     /** firefox **/ 
+     -moz-animation-name: loadRotate;
+     -moz-animation-duration: 1s;
+     -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+     /** w3c **/
+     animation-name: loadRotate;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+ }
+ /** webkit **/
+ @-webkit-keyframes loadRotate {
+     from {
+         -webkit-transform:rotate(0deg);
+     }
+     25% {
+
+     }
+     to {
+         -webkit-transform:rotate(360deg);
+     }
+ }
+ /** firefox **/
+ @-moz-keyframes loadRotate {
+     from {
+         -moz-transform:rotate(0deg);
+     }
+     to {
+         -moz-transform:rotate(360deg);
+     }
+
+ }
+ /** w3c **/
+ @keyframes loadRotate {
+     form {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(360deg);
+     }
+ }
+</pre>
+
+
+<p>HTML 代码如下：</p>
+
+<pre class="html" name="colorcode">
+&lt;p id="loading"&gt;Loading&lt;/p&gt;
+</pre>
+
+
+<p>恩，这样就 OK 了。</p>
+
+<p>后话：Loading 的“菊花”样式，有一个 JS 可以实现，就是 <a href="http://fgnass.github.com/spin.js/" title="spin.js" target="_blank">spin.js</a>，也能兼容 IE 。但其兼容 IE 的方式是使用滤镜，对性能有所影响。</p>
+
+        </div>
+    </div>
+</article>
+<nav class="pagination fn-clear" id="violet-paging">
+    <div class="pagination-list">
+        
+        <a class="prev" href="/2012/06/12/some-solution-for-ie-hack.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>几个 IE 样式解决方案</a>
+        
+        
+        <a class="next" href="/2013/10/29/blog-change.html" rel="bookmark">又一次变更<i class="fa fa-chevron-circle-right"></i></a>
+        
+    </div>
+</nav>
+<div class="comment">
+    
+        <div class="comment-cnt">
+            <div id="disqus_thread"></div>
+        </div>
+    
+</div>
+
+        </section>
+        <footer class="foot" id="violet-foot">
+            <div class="footer fn-clear">
+                <h1 class="logo">云柯</h1>
+            </div>
+            <div class="copyright">
+                <div class="copyright-cnt fn-clear">
+                    
+                    <a class="follow" href="http://www.zhanxin.info" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    
+                    <a class="follow" href="http://www.zhanxin.info" target="_blank"><i class="fa fa-facebook"></i></a>
+                    
+                    <a class="follow" href="http://github.com/pizn" target="_blank"><i class="fa fa-github"></i></a>
+                    
+                    <a class="follow" href="http://weibo.com/pizner" target="_blank"><i class="fa fa-weibo"></i></a>
+                    
+                    <a class="follow" href="http://www.zhanxin.info" target="_blank"><i class="fa fa-renren"></i></a>
+                    
+                    <a class="follow" href="http://www.zhanxin.info" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    
+                    <a class="follow" href="http://www.zhanxin.info" target="_blank"><i class="fa fa-twitter"></i></a>
+                    
+                    <a class="follow" href="http://www.zhanxin.info" target="_blank"><i class="fa fa-rss"></i></a>
+                    
+                    <p class="text">© 2013 Violet Jekyll Theme.Design by <a href="http://www.zhanxin.info">zhanxin.lin</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="http://singco.github.io/themes/violet/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="http://singco.github.io/themes/violet/js/jquery-scrollTo.js"></script>
+    <script type="text/javascript" src="http://singco.github.io/themes/violet/js/common.js"></script>
+    <script type="text/javascript">
+        var headImgArr = [];
+        
+            headImgArr.push("/themes/violet/images/hdbg01.jpg");
+        
+            headImgArr.push("/themes/violet/images/hdbg02.jpg");
+        
+            headImgArr.push("/themes/violet/images/hdbg03.jpg");
+        
+            headImgArr.push("/themes/violet/images/hdbg04.jpg");
+        
+        if(headImgArr.length <= 0) {
+            headImgArr = ["/themes/violet/images/hdbg03.jpg"];
+            var item = 0;
+        } else {
+            var item = Math.floor(Math.random() * (headImgArr.length));
+        }
+        $("#violet-head").css({
+            "background-image": "url(" + headImgArr[item] + ")"
+        });
+    </script>
+    
+        
+        <script type="text/javascript">
+            //disqus
+            var disqus_shortname = 'piznblog';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                    document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        
+    
+</body>
+</html>
