@@ -8,7 +8,7 @@ safe: false
 #站点基础配置
 title: 云柯
 subTitle: Welcome to yunke's site.
-description: 这是 PIZn 的又一个博客，它是基于 Jekyll 搭建起来的。在这里，不仅仅是用来快速记录工作，学习，生活的一点一滴的地方，更是 PIZn 对 Jekyll 的学习和使用的一次有意义的实践。
+description: 孙云柯，中国传媒大学传播学传播研究方法研究生，师从沈浩教授，关注数据新闻、数据可视化和数据挖掘领域。
 url: http://singco.github.io
 feed: /atom.xml
 
@@ -21,9 +21,9 @@ nav:
   - text: 作品
     url: /works.html
   - text: 联系我
-    url: http://www.zhanxin.info/contact.html
+    url: http://weibo.com/singco890826
   - text: 博客源代码
-    url: https://github.com/pizn/pizn.github.com
+    url: https://github.com/singco/singco.github.io
 
 #theme config
 themes: /themes/violet
@@ -44,7 +44,7 @@ follow:
   - class: fa-github
     url: http://github.com/pizn
   - class: fa-weibo
-    url: http://weibo.com/pizner
+    url: http://weibo.com/singco890826
   - class: fa-renren
     url: http://www.zhanxin.info
   - class: fa-pinterest
