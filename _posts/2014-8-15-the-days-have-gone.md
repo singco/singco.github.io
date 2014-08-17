@@ -2,6 +2,7 @@
 layout: post
 title: Times that have gone
 date: 2014-8-15
+category: Life 
 description: 这是云柯在 Github 上面的第一篇文章，那些逝去的青春
 keywords: DD, jekyll, singco
 ---
