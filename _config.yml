@@ -6,8 +6,8 @@ paginate: 8
 safe: false
 
 #站点基础配置
-title: Singco|云柯
-subTitle: Here comes Singco!
+title: Singco
+subTitle: This is Yunke Sun' site!
 description: 孙云柯，中国传媒大学传播学传播研究方法研究生，师从沈浩教授，关注数据新闻、数据可视化和数据挖掘领域。
 url: http://singco.github.io
 feed: /atom.xml

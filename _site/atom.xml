@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
-   <title>云柯</title>
+   <title>Singco</title>
    <link href="http://singco.github.io/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://singco.github.io" rel="alternate" type="text/html" />
-   <updated>2014-08-15T14:58:43+08:00</updated>
+   <updated>2014-08-18T00:01:07+08:00</updated>
    <id>http://singco.github.io</id>
    <author>
      <name></name>
@@ -13,39 +13,50 @@
 
    
    <entry>
-     <title>那些随风飘过的日子</title>
-     <link href="http://singco.github.io/2014/08/15/%E9%82%A3%E4%BA%9B%E9%9A%8F%E9%A3%8E%E9%A3%98%E8%BF%87%E7%9A%84%E6%97%A5%E5%AD%90.html"/>
+     <title>Times that have gone</title>
+     <link href="http://singco.github.io/life/2014/08/15/the-days-have-gone.html"/>
      <updated>2014-08-15T00:00:00+08:00</updated>
-     <id>http://singco.github.io/2014/08/15/那些随风飘过的日子</id>
-     <content type="html">&lt;h1&gt;布衣暖，菜根香，诗书滋味长&lt;/h1&gt;
+     <id>http://singco.github.io/life/2014/08/15/the-days-have-gone</id>
+     <content type="html">&lt;h1 id=&quot;section&quot;&gt;布衣暖，菜根香，诗书滋味长&lt;/h1&gt;
 
 &lt;hr /&gt;
 
-&lt;blockquote&gt;&lt;p&gt;知道谢每一粒种子每一缕清风，也知道要早起播种和御风而行。光阴改变着一切，能做的事就只是长途跋涉的归真返璞。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“知道谢每一粒种子每一缕清风，也知道要早起播种和御风而行。光阴改变着一切，能做的事就只是长途跋涉的归真返璞。”&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3&gt;&lt;em&gt;2014-07-23&lt;/em&gt; 香山&lt;/h3&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;&lt;em&gt;2014-07-23&lt;/em&gt; 香山&lt;/h3&gt;
 
-&lt;blockquote&gt;&lt;p&gt;我们有时千里迢迢，只像是为了去找一处不见墙的地方：荒原、大海、林莽甚至沙漠。但未必就能逃脱。墙永远在你心里，构筑恐惧，也牵动思念。一只“飞去来器”，从墙出发，又回到墙。你千里迢迢地去时，鲁宾逊正千里迢迢地回来。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;我们有时千里迢迢，只像是为了去找一处不见墙的地方：荒原、大海、林莽甚至沙漠。但未必就能逃脱。墙永远在你心里，构筑恐惧，也牵动思念。一只“飞去来器”，从墙出发，又回到墙。你千里迢迢地去时，鲁宾逊正千里迢迢地回来。&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3&gt;&lt;em&gt;2014-07-28&lt;/em&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;&lt;em&gt;2014-07-28&lt;/em&gt;&lt;/h3&gt;
 
-&lt;blockquote&gt;&lt;p&gt;畅想是，诗书滋味长。现实是，闻价挥挥手。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;畅想是，诗书滋味长。现实是，闻价挥挥手。&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3&gt;&lt;em&gt;2014-08-02&lt;/em&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;&lt;em&gt;2014-08-02&lt;/em&gt;&lt;/h3&gt;
 
-&lt;blockquote&gt;&lt;p&gt;晚安。宁静或起伏的心。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;晚安。宁静或起伏的心。&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3&gt;&lt;em&gt;2014-08-14&lt;/em&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;&lt;em&gt;2014-08-14&lt;/em&gt;&lt;/h3&gt;
 
-&lt;blockquote&gt;&lt;p&gt;我的世界太过安静，&lt;br/&gt;
-静的可以听见自己的心跳的声音。&lt;br/&gt;
-心房的血液慢慢流回心室，&lt;br/&gt;
-如此这般的轮回。&lt;br/&gt;
-聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。&lt;br/&gt;
-傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。&lt;br/&gt;
-你以为我刀枪不入，我以为你百毒不侵。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;我的世界太过安静，&lt;br /&gt;
+静的可以听见自己的心跳的声音。&lt;br /&gt;
+心房的血液慢慢流回心室，&lt;br /&gt;
+如此这般的轮回。&lt;br /&gt;
+聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。&lt;br /&gt;
+傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。&lt;br /&gt;
+你以为我刀枪不入，我以为你百毒不侵。  &lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;   ——徐志摩《寂寞人心》&lt;/p&gt;
+&lt;p&gt;——徐志摩《寂寞人心》&lt;/p&gt;
+
 </content>
    </entry>
    
