@@ -22,8 +22,8 @@ nav:
     url: /category.html  
   - text: 作品
     url: /works.html
-  - text: 联系我
-    url: http://weibo.com/singco890826
+  - text: 关于我
+    url: /about.html
   - text: 博客源代码
     url: https://github.com/singco/singco.github.io
 
