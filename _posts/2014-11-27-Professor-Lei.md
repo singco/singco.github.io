@@ -3,7 +3,7 @@ layout: post
 title: Professor Lei
 date: 2014-11-27
 category: life 
-description: 这是云柯在 Github 上面的第二篇文章，那些逝去的青春
+description: 这是云柯在 Github 上面的第三篇文章，值得尊敬的教授
 keywords: Professor Lei, criticism,independence,respect
 ---
 # 雷跃捷教授
