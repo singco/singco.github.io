@@ -82,7 +82,10 @@ samp {
 /* =Common
 --------------------------------------*/
 a:link {
-    color: #08c;
+    color: #ff6600;
+    text-decoration: none;
+    line-height: inherit;
+
 }
 a:hover {
     color: #08c;
