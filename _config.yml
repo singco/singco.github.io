@@ -14,17 +14,17 @@ feed: /atom.xml
 
 #菜单配置
 nav:
-  - text: 首页
+  - text: Index
     url: /index.html
-  - text: 文章归档
+  - text: Archives
     url: /archives.html
-  - text: 分类
+  - text: Category
     url: /category.html  
-  - text: 作品
+  - text: Works
     url: /works.html
-  - text: 关于我
+  - text: About
     url: /about.html
-  - text: 博客源代码
+  - text: Github
     url: https://github.com/singco/singco.github.io
 
 #theme config
