@@ -2,7 +2,7 @@
 layout: post
 title: Professor Lei
 date: 2014-11-27
-category: life 
+category: Life 
 description: 这是云柯在 Github 上面的第三篇文章，值得尊敬的教授
 keywords: Professor Lei, criticism,independence,respect
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: 找回曾经的博客-1
 date: 2014-8-20
-category: life 
+category: Life 
 description: 这是云柯在 Github 上面的第二篇文章，那些逝去的青春
 keywords: 父亲母亲, jekyll, singco
 ---

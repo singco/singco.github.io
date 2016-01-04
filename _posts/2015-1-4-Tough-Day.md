@@ -2,7 +2,7 @@
 layout: post
 title: What a tough day
 date: 2015-1-4
-category: life 
+category: Life 
 description: 这是云柯在 Github 上面的第四篇文章，糟糕的一天
 keywords: Tough,NCPAO,Work,
 ---
